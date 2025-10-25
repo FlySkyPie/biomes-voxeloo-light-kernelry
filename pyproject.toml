@@ -18,6 +18,7 @@ distribution = false
 [tool.pdm.scripts]
 build = { cmd = [
     "python",
-    "gen_light_kernel.py",
+    "-m",
+    "scripts.gen_light_kernel",
     "include/VoxelooLightKernelry/light_kernel.hpp",
 ] }
