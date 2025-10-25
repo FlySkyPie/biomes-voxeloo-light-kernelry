@@ -1,0 +1,23 @@
+[project]
+name = "biomes-voxeloo-light-kernelry"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "Wei Ji (FlySkyPie)", email = "c445dj544@gmail.com" },
+    { name = "Global Illumination, Inc." },
+]
+dependencies = ["clang-format>=21.1.2", "numpy>=2.3.4"]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = { text = "MIT" }
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+build = { cmd = [
+    "python",
+    "gen_light_kernel.py",
+    "include/VoxelooLightKernelry/light_kernel.hpp",
+] }
