@@ -221,7 +221,8 @@ def groups_code():
             switch (group) {
                 $case_code
                 default:
-                CHECK_UNREACHABLE("Invalid isomorphism group");
+                std::cout << "Invalid isomorphism group";
+                //CHECK_UNREACHABLE("Invalid isomorphism group");
             }
             return out;
          }
@@ -272,7 +273,8 @@ def permute_samples_code():
             switch (permute) {
                 $case_code
                 default:
-                CHECK_UNREACHABLE("Invalid permutation");
+                std::cout << "Invalid permutation";
+                //CHECK_UNREACHABLE("Invalid permutation");
             }
             return out;
          }
@@ -300,7 +302,8 @@ def reflect_samples_code():
             switch (reflect) {
                 $case_code
                 default:
-                CHECK_UNREACHABLE("Invalid reflection");
+                std::cout << "Invalid reflection";
+                //CHECK_UNREACHABLE("Invalid reflection");
             }
             return out;
          }
@@ -384,7 +387,8 @@ def permute_mask_code():
             switch (permute) {
                 $case_code
                 default:
-                CHECK_UNREACHABLE("Invalid permutation");
+                std::cout << "Invalid permutation";
+                //CHECK_UNREACHABLE("Invalid permutation");
             }
             return out;
          }
@@ -422,7 +426,8 @@ def reflect_mask_code():
             switch (reflect) {
                 $case_code
                 default:
-                CHECK_UNREACHABLE("Invalid reflection");
+                std::cout << "Invalid reflection";
+                //CHECK_UNREACHABLE("Invalid reflection");
             }
             return out;
          }
@@ -484,8 +489,7 @@ def hpp_code():
         #include <algorithm>
         #include <array>
 
-        #include "voxeloo/common/errors.hpp"
-        #include "voxeloo/common/geometry.hpp"
+        #include <VoxelooGeometry/geometry.hpp>
 
         namespace voxeloo::galois::lighting {
 

@@ -6,12 +6,18 @@ include(GNUInstallDirs)
 
 add_library(${PROJECT_NAME} INTERFACE)
 
+include(cmake/CPM.cmake)
+
+CPMAddPackage("gh:FlySkyPie/biomes-voxeloo-geometry@0.1.1")
+
 target_include_directories(
     ${PROJECT_NAME}
     INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
+
+target_link_libraries(${PROJECT_NAME} VoxelooGeometry)
 
 install(
     DIRECTORY include/
