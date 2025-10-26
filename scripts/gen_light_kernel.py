@@ -488,6 +488,7 @@ def hpp_code():
 
         #include <algorithm>
         #include <array>
+        #include <iostream>
 
         #include <VoxelooGeometry/geometry.hpp>
 
